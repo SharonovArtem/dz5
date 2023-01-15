@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace jun1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int money;
+            int diamonds;
+            int diamondPrice = 25;
+
+            Console.WriteLine("Приветствую вас в обменнике валюты!");
+            Console.WriteLine("Сколько золота у вас есть?");
+            money = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Отлично! У вас есть " + money + " золота!");
+            Console.WriteLine("Цена 1 кристалла - 25 золота.");
+            Console.WriteLine("Сколько кристаллов вам нужно?");
+            diamonds = Convert.ToInt32(Console.ReadLine());
+            
+            money -= diamonds * diamondPrice;
+
+            Console.WriteLine("Приятная сделка! Теперь у вас в кошельке " + money + " золота и " + diamonds + " кристаллов!");
+        }
+    }
+}
